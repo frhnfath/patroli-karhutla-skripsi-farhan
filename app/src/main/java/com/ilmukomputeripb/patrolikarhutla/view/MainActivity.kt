@@ -1,7 +1,8 @@
-package com.ilmukomputeripb.patrolikarhutla
+package com.ilmukomputeripb.patrolikarhutla.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ilmukomputeripb.patrolikarhutla.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

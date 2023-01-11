@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Patroli Karhutla</string>
+    <string name="main_logo">main_logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logo_ipb">Logo IPB</string>
+    <string name="logo_klhk">Logo KLHK</string>
+    <string name="logo_manggala">Logo Manggala</string>
 </resources>
