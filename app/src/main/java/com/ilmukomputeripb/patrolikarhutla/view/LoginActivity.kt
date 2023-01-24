@@ -1,5 +1,6 @@
 package com.ilmukomputeripb.patrolikarhutla.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ilmukomputeripb.patrolikarhutla.databinding.ActivityLoginBinding
@@ -11,5 +12,12 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
+
+
 }
