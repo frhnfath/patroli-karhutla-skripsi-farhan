@@ -10,4 +10,84 @@
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
     <string name="title_activity_hotspot_maps">HotspotMapsActivity</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">PATROLI PENCEGAHAN KEBAKARAN HUTAN DAN LAHAN</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="judul_kamus">Judul Kamus</string>
+    <string name="beranda">Beranda</string>
+    <string name="hotspot_sipongi">Hotspot SiPongi</string>
+    <string name="kamus_istilah">Kamus Istilah</string>
+    <string name="logout">Logout</string>
+
+
+    <!--    Kamus Istilah   -->
+    <string-array name="title">
+        <item>Hotspot</item>
+        <item>FFMC KKAS</item>
+        <item>FWI</item>
+        <item>DC KK</item>
+        <item>Manggala Agni</item>
+        <item>Daerah Operasi (Daops)</item>
+        <item>NOAA-20</item>
+        <item>SNPP</item>
+        <item>Terra/Aqua</item>
+        <item>Kebakaran Bawah (Ground Fire)</item>
+        <item>Kebakaran Tajuk (Crown Fire)</item>
+        <item>Patroli Mandiri</item>
+        <item>Patroli Terpadu</item>
+        <item>Patroli Rutin/Pencegahan</item>
+        <item>Confidence Titik Panas</item>
+        <item>Landsat-8</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Hotspot atau Titik panas merupakan indikator terjadinya karhutla yang mendeteksi area yang memiliki suhu relatif lebih tinggi dibandingkan dengan suhu disekitarnya.</item>
+        <item>Fine Fuel Moisture Code/Kode Air Serasah (angka peringkat kadar air dari serasah dan bahan bakar lainnya).</item>
+        <item>Fire Weather Index/Indeks Cuaca Kebakaran (Peringkat intensitas kebakaran)</item>
+        <item>Drought Index/Indeks kekeringan (angka peringkat rata-rata air dari bahan organik di bawah permukaan tanah).</item>
+        <item>Manggala Agni adalah organisasi pengendalian kebakaran hutan dan lahan pada tingkat Pemerintahan Pusat yang mempunyai tugas dan fungsi pencegahan, pemadaman, penanganan pasca kebakaran, dukungan evakuasi dan penyelamatan, serta dukungan manajemen yang dibentuk dan menjadi tanggung jawab Menteri.</item>
+        <item>Daerah Operasi yang selanjutnya disebut Daops adalah organisasi pelaksana tugas teknis Manggala Agni di lapangan yang dipimpin oleh Kepala Daops.</item>
+        <item>NOAA-20 (National Oceanic and Atmospheric Administration seri 20): satelit dengan sensor VIIRS, resolusi 375 meter, tingkat kepercayaan titik panas Rendah: 7, Medium: 8, Tinggi: 9</item>
+        <item>SNPP (Suomi-National Polar-orbiting Partnership): satelit dengan sensor VIIRS, resolusi 375 meter, tingkat kepercayaan titik panas Rendah: 7, Medium: 8, Tinggi: 9</item>
+        <item>Terra/Aqua: satelit dengan sensor MODIS, resolusi 1000 meter, tingkat kepercayaan titik panas Rendah: 0 – 29, Medium: 30 – 79, Tinggi: 80 – 100.</item>
+        <item>Kebakaran Bawah (Ground Fire): Tipe kebakaran bawah ini biasanya mengkonsumsi bahan bakar bawah berupa material organik yang terdapat di bawah permukaan tanah/ lantai hutan (Ground Fuels).</item>
+        <item>Kebakaran Tajuk (Crown Fire):  Kebakaran tajuk biasanya bergerak dari satu tajuk pohon ke tajuk pohon lainnya dengan cara mengkonsumsi bahan bakar yang terdapat di tajuk pohon tersebut baik berupa daun, cangkang biji, ranting bagian atas pohon, tajuk pohon (Aerial fuels).</item>
+        <item>Patroli Mandiri Pencegahan Kebakaran Hutan dan Lahan adalah  pergerakan tim  yang  terdiri  dari Manggala  Agni/  ASN/Brigdalkarhutla,  MPA,  Tokoh Masyarakat/LSM  serta  pihak terkait  ke  wilayah  kerja  untuk  mencegah, mengetahui, dan memadamkan secara dini kebakaran hutan, dengan menggunakan sarana sesuai dengan kondisi setempat</item>
+        <item>Patroli Terpadu Pencegahan Kebakaran Hutan dan Lahan adalah  pergerakan  tim  yang  terdiri  dari  antara  lain  Manggala Agni, TNI, POLRI, perwakilan pemerintah daerah dan masyarakat ke wilayah kerja untuk mencegah, mengetahui, dan memadamkan secara dini kebakaran hutan, dengan menggunakan sarana sesuai dengan kondisi setempat</item>
+        <item>Patroli Rutin/Pencegahan adalah pergerakan tim yang terdiri dari Manggala Agni dan atau unsur lainnya seperti ASN/ TNI/ POLRI, Brigdalkarhutla atau Masyarakat Peduli Api (MPA) yang bersifat fleksibel secara harian dengan Surat Tugas dari Kepala Balai Unit Pelaksana Teknis/ Kepala Satker pelaksana dalam rangka pencegahan dan pemadaman kebakaran hutan dan lahan.</item>
+        <item>Tingkat Kepercayaan atau Confidence Level adalah nilai yang menunjukan tingkat kepercayaan bahwa Titik Panas yang dipantau dari data satelit penginderaan jauh merupakan benar-benar kejadian kebakaran yang sebenarnya di lapangan. Pengkategorian titik panas terdiri atas titik panas kepercayaan tinggi, titik panas kepercayaan sedang, dan titik panas kepercayaan rendah, meliputi \n
+        \t a. Titik panas kepercayaan tinggi dengan tingkat kepercayaan 80% (delapan puluh persen) sampai dengan 100% (seratus persen) \n
+        \t b. Titik panas kepercayaan sedang dengan tingkat kepercayaan 30% (tiga puluh persen) sampai dengan 79% (tujuh puluh sembilan persen) \n
+        \t c. Titik panas kepercayaan rendah dengan tingkat kepercayaan dibawah 30% (tiga puluh persen)</item>
+        <item>Landsat-8: satelit dengan sensor OLI, resolusi 30 meter, tingkat kepercayaan titik panas Rendah: 7, Medium: 8, Tinggi: 9</item>
+    </string-array>
+
+    <string-array name="source">
+        <item>Peraturan Menteri Lingkungan Hidup dan Kehutanan Republik Indonesia Nomor: P.32/MenLHK/Setjen/Kum.1/3/2016 tentang Pengendalian Kebakaran Hutan dan Lahan</item>
+        <item>Peraturan Direktur Jendral Perlindungan Hutan dan Konservasi Alam Nomor : P.4/IV-PKH/2013 Tentang Prosedur Tetap Pengendalian Kebakaran Hutan</item>
+        <item>Peraturan Direktur Jendral Perlindungan Hutan dan Konservasi Alam Nomor : P.4/IV-PKH/2013 Tentang Prosedur Tetap Pengendalian Kebakaran Hutan</item>
+        <item>Peraturan Direktur Jendral Perlindungan Hutan dan Konservasi Alam Nomor : P.4/IV-PKH/2013 Tentang Prosedur Tetap Pengendalian Kebakaran Hutan</item>
+        <item>Peraturan Menteri Lingkungan Hidup dan Kehutanan Republik Indonesia Nomor: P.32/MenLHK/Setjen/Kum.1/3/2016 tentang Pengendalian Kebakaran Hutan dan Lahan</item>
+        <item>Peraturan Menteri Lingkungan Hidup dan Kehutanan Republik Indonesia Nomor: P.32/MenLHK/Setjen/Kum.1/3/2016 tentang Pengendalian Kebakaran Hutan dan Lahan</item>
+        <item>Panduan Website LAPAN Fire Hotspot versi 2.0 (Juli 2020)</item>
+        <item>Panduan Website LAPAN Fire Hotspot versi 2.0 (Juli 2020)</item>
+        <item>Panduan Website LAPAN Fire Hotspot versi 2.0 (Juli 2020)</item>
+        <item>1. Brown, A.  A.  and K.  P.  Davis.  1973.  Forest Fire Control and Use.  McGraw-Hill Book Company.  New York,  USA.  686 pp. \n
+            2. Syaufina, L.  2008.  Kebakaran hutan dan Lahan di Indonesia: Perilaku Api, Penyebab dan Dampak Kebakaran.  PT. Bayu Media.  Malang. 264 pp.</item>
+        <item>1. Brown, A.  A.  and K.  P.  Davis.  1973.  Forest Fire Control and Use.  McGraw-Hill Book Company.  New York,  USA.  686 pp. \n
+            2. Syaufina, L.  2008.  Kebakaran hutan dan Lahan di Indonesia: Perilaku Api, Penyebab dan Dampak Kebakaran.  PT. Bayu Media.  Malang. 264 pp.</item>
+        <item>Peraturan Direktur Jendral Pengendalian Perubahan Iklim Nomor : P.12/PPI/Set/Kum.1/12/2020P.7/PPI/PKHL/KEU.1/11/2016 Tentang Standar Operasional Prosedur Kegiatan Pengendalian Kebakaran Hutan Dan Lahan</item>
+        <item>Peraturan Direktur Jendral Pengendalian Perubahan Iklim Nomor : P.12/PPI/Set/Kum.1/12/2020P.7/PPI/PKHL/KEU.1/11/2016 Tentang Standar Operasional Prosedur Kegiatan Pengendalian Kebakaran Hutan Dan Lahan</item>
+        <item>Peraturan Direktur Jendral Pengendalian Perubahan Iklim Nomor: P.12/PPI/Set/Kum.1/12/2020 Tentang Standar Operasional Prosedur Kegiatan Pengendalian Kebakaran Hutan dan Lahan</item>
+        <item>Peraturan Menteri Lingkungan Hidup dan Kehutanan Republik Indonesia Nomor P.8/MENLHK/SETJEN/KUM.1/3/2018 Tentang Prosedur Tetap Pengecekan Lapangan Informasi Titik Panas dan/atau Informasi Kebakaran Hutan dan Lahan</item>
+        <item>Panduan Website LAPAN Fire Hotspot versi 2.0 (Juli 2020)</item>
+    </string-array>
 </resources>

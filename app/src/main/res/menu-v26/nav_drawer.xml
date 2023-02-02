@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:ignore="HardcodedText">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/nav_beranda"
         android:icon="@drawable/ic_baseline_home_24"
-        app:showAsAction="always|withText"
+        app:showAsAction="never"
         android:tint="@color/red"
-        android:title="Beranda" />
+        android:title="@string/beranda" />
 
     <item
         android:id="@+id/nav_hotspot_sipongi"
-        app:showAsAction="always|withText"
-        android:title="Hotspot SiPongi" />
+        app:showAsAction="never"
+        android:icon="@drawable/ic_hostspot"
+        android:iconTint="@color/red"
+        android:title="@string/hotspot_sipongi" />
 
     <item
         android:id="@+id/nav_kamus"
         android:icon="@drawable/ic_book"
-        app:showAsAction="always|withText"
+        app:showAsAction="never"
         android:iconTint="@color/red"
-        android:title="Kamus Istilah" />
+        android:title="@string/kamus_istilah" />
 
     <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/ic_logout"
-        app:showAsAction="always|withText"
+        app:showAsAction="never"
         android:iconTint="@color/red"
-        android:title="Logout" />
-
+        android:title="@string/logout" />
 </menu>
