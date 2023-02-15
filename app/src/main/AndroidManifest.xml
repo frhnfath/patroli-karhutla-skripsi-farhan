@@ -13,8 +13,32 @@
         android:theme="@style/Theme.PatroliKarhutla"
         tools:targetApi="31">
         <activity
+            android:name=".view.SplashActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.PatroliActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity"
+            android:label="@string/title_activity_patroli">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.KamusActivity"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.KamusDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".view.KamusActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -46,7 +70,8 @@
         <activity
             android:name=".view.HotspotMapsActivity"
             android:exported="false"
-            android:label="@string/title_activity_hotspot_maps" />
+            android:label="@string/hotspot_sipongi"
+            android:parentActivityName=".view.MainActivity" />
         <activity
             android:name=".view.LoginActivity"
             android:exported="true">
@@ -55,6 +80,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

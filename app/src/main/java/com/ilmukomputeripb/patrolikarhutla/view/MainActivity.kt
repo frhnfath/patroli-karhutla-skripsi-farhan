@@ -5,8 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.fragment.app.Fragment
+import com.ilmukomputeripb.patrolikarhutla.NotesFragment
+import com.ilmukomputeripb.patrolikarhutla.ProfileFragment
 import com.ilmukomputeripb.patrolikarhutla.R
 import com.ilmukomputeripb.patrolikarhutla.databinding.ActivityMainBinding
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.title = dateFormatter()
 //      enable navigation drawer
         binding.apply {
             toggle = ActionBarDrawerToggle(this@MainActivity, myDrawerLayout, R.string.nav_open, R.string.nav_close)
@@ -41,6 +48,35 @@ class MainActivity : AppCompatActivity() {
                 true
             }
         }
+
+        // setting bottom navigation
+        setCurrentFragment(NotesFragment())
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.patroli->setCurrentFragment(NotesFragment())
+                R.id.profile->setCurrentFragment(ProfileFragment())
+            }
+            true
+        }
+
+        binding.fab.setOnClickListener {
+            val intent = Intent(this, PatroliActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun setCurrentFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flFragment, fragment)
+            commit()
+        }
+    }
+
+    fun dateFormatter(): String {
+        val date = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.getDefault())
+        val formattedDate = formatter.format(date)
+        return "Laporan $formattedDate"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

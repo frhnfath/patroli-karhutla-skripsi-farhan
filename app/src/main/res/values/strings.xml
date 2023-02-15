@@ -90,4 +90,21 @@
         <item>Peraturan Menteri Lingkungan Hidup dan Kehutanan Republik Indonesia Nomor P.8/MENLHK/SETJEN/KUM.1/3/2018 Tentang Prosedur Tetap Pengecekan Lapangan Informasi Titik Panas dan/atau Informasi Kebakaran Hutan dan Lahan</item>
         <item>Panduan Website LAPAN Fire Hotspot versi 2.0 (Juli 2020)</item>
     </string-array>
+    <string name="title_activity_patroli">PatroliActivity</string>
+    <string name="tab_text_1">Umum</string>
+    <string name="tab_text_2">Darat</string>
+    <string name="tab_text_3">Observasi</string>
+    <string name="patroli">Patroli</string>
+    <string name="sumber">Sumber :</string>
+    <string name="reload">reload</string>
+    <string name="search">Search</string>
+    <string name="profil">Profil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="daerah_operasi">Daerah Operasi: </string>
+    <string name="nomor_registrasi">Nomor Registrasi</string>
+    <string name="email">Email</string>
+    <string name="no_hp">No. HP</string>
+    <string name="desa">Desa</string>
+    <string name="tim">Tim :</string>
+    <string name="ubah_password">Ubah Password</string>
 </resources>
