@@ -1,12 +1,15 @@
 package com.ilmukomputeripb.patrolikarhutla
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.ilmukomputeripb.patrolikarhutla.databinding.FragmentNotesBinding
 import com.ilmukomputeripb.patrolikarhutla.view.MainActivity
+import com.ilmukomputeripb.patrolikarhutla.view.PatroliActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,9 +25,12 @@ class NotesFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var _binding: FragmentNotesBinding
+    private val binding get() = _binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val mainActivity = MainActivity()
         (activity as AppCompatActivity).supportActionBar?.title = mainActivity.dateFormatter()
         arguments?.let {
@@ -36,9 +42,20 @@ class NotesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notes, container, false)
+        _binding = FragmentNotesBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.fab.setOnClickListener {
+            activity?.let {
+                val intent = Intent(it, PatroliActivity::class.java)
+                it.startActivity(intent)
+            }
+        }
     }
 
     companion object {

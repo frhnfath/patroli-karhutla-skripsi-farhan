@@ -41,10 +41,12 @@ class KamusActivity : AppCompatActivity() {
                     R.id.nav_beranda-> {
                         val intent  = Intent(this@KamusActivity, MainActivity::class.java)
                         startActivity(intent)
+                        finish()
                     }
                     R.id.nav_hotspot_sipongi-> {
                         val intent = Intent(this@KamusActivity, HotspotMapsActivity::class.java)
                         startActivity(intent)
+                        finish()
                     }
                     R.id.nav_logout-> {
                         val intent = Intent(this@KamusActivity, LoginActivity::class.java)

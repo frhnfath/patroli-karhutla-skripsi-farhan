@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.ilmukomputeripb.patrolikarhutla.R
 import com.ilmukomputeripb.patrolikarhutla.databinding.FragmentPatroliBinding
 
 /**
  * A placeholder fragment containing a simple view.
  */
-class PlaceholderFragment : Fragment() {
+class PatroliFragment : Fragment() {
 
     private lateinit var pageViewModel: PageViewModel
     private var _binding: FragmentPatroliBinding? = null
@@ -38,9 +37,8 @@ class PlaceholderFragment : Fragment() {
         _binding = FragmentPatroliBinding.inflate(inflater, container, false)
         val root = binding.root
 
-        val textView: TextView = binding.sectionLabel
         pageViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+
         })
         return root
     }
@@ -57,8 +55,8 @@ class PlaceholderFragment : Fragment() {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): PlaceholderFragment {
-            return PlaceholderFragment().apply {
+        fun newInstance(sectionNumber: Int): PatroliFragment {
+            return PatroliFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }

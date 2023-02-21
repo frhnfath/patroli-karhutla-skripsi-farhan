@@ -30,10 +30,9 @@ class CustomButton : AppCompatButton {
         super.onDraw(canvas)
         background = if (isEnabled) enabledBackground else disabledBackground
 
-        setText(txtColor)
+        setTextColor(txtColor)
         textSize = 12f
         gravity = Gravity.CENTER
-        text = "LOGIN"
     }
 
     private fun init() {

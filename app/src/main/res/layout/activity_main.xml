@@ -16,6 +16,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view"
             android:id="@+id/flFragment"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -26,19 +27,6 @@
             android:id="@+id/bottom_navigation_view"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/bottom_navigation_menu" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/fab"
-            app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/red"
-            app:tint="@color/white"
-            android:src="@drawable/ic_create"
-            android:contentDescription="floating action button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -59,10 +59,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        binding.fab.setOnClickListener {
-            val intent = Intent(this, PatroliActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun setCurrentFragment(fragment: Fragment) {

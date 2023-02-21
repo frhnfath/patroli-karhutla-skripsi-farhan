@@ -107,4 +107,7 @@
     <string name="desa">Desa</string>
     <string name="tim">Tim :</string>
     <string name="ubah_password">Ubah Password</string>
+    <string name="password_lama">Password Lama</string>
+    <string name="confirm_password">Konfirmasi Password Baru</string>
+    <string name="new_password">Password Baru</string>
 </resources>
