@@ -1,10 +1,9 @@
-package com.ilmukomputeripb.patrolikarhutla.ui.main
+package com.ilmukomputeripb.patrolikarhutla.uifragment.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 
 class PageViewModel : ViewModel() {
 

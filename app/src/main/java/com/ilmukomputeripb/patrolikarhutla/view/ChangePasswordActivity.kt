@@ -1,4 +1,4 @@
-package com.ilmukomputeripb.patrolikarhutla.ui.main
+package com.ilmukomputeripb.patrolikarhutla.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

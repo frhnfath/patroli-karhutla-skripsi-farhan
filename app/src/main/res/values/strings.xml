@@ -90,6 +90,18 @@
         <item>Peraturan Menteri Lingkungan Hidup dan Kehutanan Republik Indonesia Nomor P.8/MENLHK/SETJEN/KUM.1/3/2018 Tentang Prosedur Tetap Pengecekan Lapangan Informasi Titik Panas dan/atau Informasi Kebakaran Hutan dan Lahan</item>
         <item>Panduan Website LAPAN Fire Hotspot versi 2.0 (Juli 2020)</item>
     </string-array>
+    <string-array name="array_aktivitas_harian">
+        <item>Apel Pagi</item>
+        <item>Apel Sore</item>
+        <item>Briefing</item>
+        <item>Ground Check Hotspot</item>
+        <item>Komunikasi Sosial</item>
+        <item>Koordinasi</item>
+        <item>Melengkapi Administrasi</item>
+        <item>Memasang Media Informasi (leaflet/brosur, stiker, bendera areal rawan kebakaran)</item>
+        <item>Menyusun Laporan Patroli</item>
+        <item>Monitoring Areal Bekas Kebakaran</item>
+    </string-array>
     <string name="title_activity_patroli">PatroliActivity</string>
     <string name="tab_text_1">Umum</string>
     <string name="tab_text_2">Darat</string>
@@ -110,4 +122,19 @@
     <string name="password_lama">Password Lama</string>
     <string name="confirm_password">Konfirmasi Password Baru</string>
     <string name="new_password">Password Baru</string>
+    <string name="data_umum">Data Umum</string>
+    <string name="wajib_diisi"><font fgcolor="#D6000B">*</font> Wajib diisi</string>
+    <string name="kategori_patroli">Kategori Patroli <font fgcolor="#D6000B">*</font></string>
+    <string name="pilih_kategori_patroli">Pilih Kategori Patroli</string>
+    <string name="pilih_aktivitas_harian">Pilih Aktivitas Harian</string>
+    <string name="aktivitas_harian">Aktivitas Harian <font fgcolor="#D6000B">*</font></string>
+    <string name="pilih_anggota_patroli">Pilih Anggota Patroli</string>
+    <string name="anggota_patroli">Anggota Patroli <font fgcolor="#D6000B">*</font></string>
+    <string name="inventori_patroli">Inventori Patroli <font fgcolor="#D6000B">*</font></string>
+    <string name="satelit_hotspot">Satelit Hotspot</string>
+    <string name="pilih_inventori_patroli">Pilih Inventori Patroli</string>
+    <string name="dokumentasi">Dokumentasi</string>
+    <string name="no_photo">Tidak Ada Foto</string>
+    <string name="tambah_foto">Tambah Foto</string>
+    <string name="pilih_satelit">Pilih Satelit</string>
 </resources>

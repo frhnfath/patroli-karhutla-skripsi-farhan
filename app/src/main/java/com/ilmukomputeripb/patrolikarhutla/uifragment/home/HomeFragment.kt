@@ -1,4 +1,4 @@
-package com.ilmukomputeripb.patrolikarhutla.ui.home
+package com.ilmukomputeripb.patrolikarhutla.uifragment.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

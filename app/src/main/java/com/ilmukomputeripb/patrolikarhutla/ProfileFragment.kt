@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.ilmukomputeripb.patrolikarhutla.databinding.FragmentProfileBinding
-import com.ilmukomputeripb.patrolikarhutla.ui.main.ChangePasswordActivity
+import com.ilmukomputeripb.patrolikarhutla.view.ChangePasswordActivity
 import com.ilmukomputeripb.patrolikarhutla.view.MainActivity
 
 // TODO: Rename parameter arguments, choose names that match

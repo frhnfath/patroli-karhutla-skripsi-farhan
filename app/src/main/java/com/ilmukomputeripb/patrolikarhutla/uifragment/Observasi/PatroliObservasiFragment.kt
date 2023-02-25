@@ -1,17 +1,16 @@
-package com.ilmukomputeripb.patrolikarhutla.ui.slideshow
+package com.ilmukomputeripb.patrolikarhutla.uifragment.Observasi
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.ilmukomputeripb.patrolikarhutla.databinding.FragmentSlideshowBinding
+import com.ilmukomputeripb.patrolikarhutla.databinding.FragmentPatroliObservasiBinding
 
-class SlideshowFragment : Fragment() {
+class PatroliObservasiFragment : Fragment() {
 
-    private var _binding: FragmentSlideshowBinding? = null
+    private var _binding: FragmentPatroliObservasiBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,16 +21,12 @@ class SlideshowFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+        val patroliObservasiViewModel =
+            ViewModelProvider(this).get(PatroliObservasiViewModel::class.java)
 
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        _binding = FragmentPatroliObservasiBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 

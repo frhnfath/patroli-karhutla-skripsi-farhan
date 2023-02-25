@@ -1,13 +1,13 @@
-package com.ilmukomputeripb.patrolikarhutla.ui.home
+package com.ilmukomputeripb.patrolikarhutla.uifragment.Darat
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class PatroliDaratViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is Patroli Darat Fragment"
     }
     val text: LiveData<String> = _text
 }

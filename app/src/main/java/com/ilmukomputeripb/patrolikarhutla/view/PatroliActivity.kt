@@ -5,7 +5,7 @@ import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
 import com.ilmukomputeripb.patrolikarhutla.R
-import com.ilmukomputeripb.patrolikarhutla.ui.main.SectionsPagerAdapter
+import com.ilmukomputeripb.patrolikarhutla.uifragment.main.SectionsPagerAdapter
 import com.ilmukomputeripb.patrolikarhutla.databinding.ActivityPatroliBinding
 
 class PatroliActivity : AppCompatActivity() {
