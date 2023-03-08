@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.ilmukomputeripb.patrolikarhutla.R
 import com.ilmukomputeripb.patrolikarhutla.databinding.FragmentPatroliDaratBinding
 
 class PatroliDaratFragment : Fragment() {
@@ -28,6 +30,29 @@ class PatroliDaratFragment : Fragment() {
         val root: View = binding.root
 
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnAddPatroliData.setOnClickListener {
+            binding.btnLayout.visibility = View.GONE
+            binding.formLayout.visibility = View.VISIBLE
+        }
+        binding.btnFfmcKkas.setOnClickListener { alertDescription(R.string.ffmc_kkas, 1) }
+        binding.btnFwiIck.setOnClickListener { alertDescription(R.string.fwi_ick, 2) }
+        binding.btnDcKk.setOnClickListener { alertDescription(R.string.dc_kk, 3) }
+    }
+
+    private fun alertDescription(title: Int, text: Int) {
+        val titleString = getString(title)
+        val message = resources.getStringArray(R.array.description)
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(titleString)
+            .setMessage(message[text])
+            .setPositiveButton("OK") {dialog, which ->
+
+            }
+            .show()
     }
 
     override fun onDestroyView() {

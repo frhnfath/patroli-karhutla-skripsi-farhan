@@ -1,6 +1,7 @@
 package com.ilmukomputeripb.patrolikarhutla.uifragment.main
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -91,6 +92,14 @@ class PatroliUmumFragment : Fragment() {
         return root
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 101) {
+            val img : Bitmap? = data?.getParcelableExtra<Bitmap>("data")
+            binding.ivDokumentasi.setImageBitmap(img)
+        }
+    }
+
     private fun alertDocumentation() {
         binding.btnUploadDocumentation.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
@@ -101,8 +110,13 @@ class PatroliUmumFragment : Fragment() {
                 }
                 .setPositiveButton("OK") {dialog, which ->
                     when(selectedDocumentationIndex) {
-                        0 -> Snackbar.make(it, selectedDocumentation, Snackbar.LENGTH_SHORT).show()
-                        1 -> Snackbar.make(it, selectedDocumentation, Snackbar.LENGTH_SHORT).show()
+                        0 -> {
+
+                        }
+                        1 -> {
+                            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                            startActivityForResult(intent, 101)
+                        }
                     }
                 }
                 .setNeutralButton("Cancel") {dialog, which ->

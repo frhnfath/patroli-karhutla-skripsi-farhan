@@ -1,23 +1,633 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
     tools:context=".uifragment.Darat.PatroliDaratFragment">
 
-    <TextView
-        android:id="@+id/text_gallery"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="fragment gallery"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.ilmukomputeripb.patrolikarhutla.customview.CustomButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_add_patroli_data"
+                android:text="@string/tambah_data_patroli"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/form_layout"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/tv_data_patroli"
+                android:text="@string/data_laporan_patroli"
+                android:textSize="24sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_wajib_diisi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/wajib_diisi"
+                app:layout_constraintTop_toBottomOf="@id/tv_data_patroli"
+                android:layout_marginTop="2dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/separator1"
+                android:background="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@id/tv_wajib_diisi"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_kabupaten"
+                android:text="@string/kabupaten_kota"
+                app:layout_constraintTop_toBottomOf="@id/edt_kecamatan"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_kabupaten"
+                android:hint="@string/contoh_kabupaten"
+                app:layout_constraintTop_toBottomOf="@id/tv_kabupaten"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_provinsi"
+                android:text="@string/provinsi"
+                app:layout_constraintTop_toBottomOf="@id/edt_kabupaten"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_provinsi"
+                android:hint="@string/contoh_provinsi"
+                app:layout_constraintTop_toBottomOf="@id/tv_provinsi"
+                android:inputType="text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/separator2"
+                android:background="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@id/edt_provinsi"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_kondisi_umum_patroli"
+                android:text="@string/kondisi_umum_lokasi_patroli"
+                app:layout_constraintTop_toBottomOf="@id/separator1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/separator_location_1"
+                android:background="@color/green"
+                app:layout_constraintTop_toTopOf="@id/btn_automatic_location" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_automatic_location"
+                android:layout_marginTop="14dp"
+                android:text="@string/isi_otomatis_lokasi"
+                app:layout_constraintTop_toBottomOf="@id/tv_kondisi_umum_patroli"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/green" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/separator_location_2"
+                android:background="@color/green"
+                app:layout_constraintTop_toBottomOf="@id/btn_automatic_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_latitude"
+                android:text="@string/latitude_dalam_format_desimal"
+                app:layout_constraintTop_toBottomOf="@id/separator_location_2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_latitude"
+                android:hint="@string/contoh_latitude"
+                app:layout_constraintTop_toBottomOf="@id/tv_latitude"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_longitude"
+                android:text="@string/longitude_dalam_format_desimal"
+                app:layout_constraintTop_toBottomOf="@id/edt_latitude"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_longitude"
+                android:hint="@string/contoh_longitude"
+                app:layout_constraintTop_toBottomOf="@id/tv_longitude"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_desa"
+                android:text="@string/desa_kelurahan"
+                app:layout_constraintTop_toBottomOf="@id/edt_longitude"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_desa"
+                android:hint="@string/contoh_desa"
+                app:layout_constraintTop_toBottomOf="@id/tv_desa"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_kecamatan"
+                android:text="@string/kecamatan"
+                app:layout_constraintTop_toBottomOf="@id/edt_desa"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_kecamatan"
+                android:hint="@string/contoh_dramaga"
+                app:layout_constraintTop_toBottomOf="@id/tv_kecamatan"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_kondisi_cuaca"
+                android:text="@string/kondisi_cuaca"
+                app:layout_constraintTop_toBottomOf="@id/separator2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/separator_cuaca_1"
+                android:background="@color/green"
+                app:layout_constraintTop_toTopOf="@id/btn_automatic_cuaca" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_automatic_cuaca"
+                android:layout_marginTop="14dp"
+                android:text="@string/isi_otomatis_cuaca"
+                app:layout_constraintTop_toBottomOf="@id/tv_kondisi_cuaca"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/green" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/separator_cuaca_2"
+                android:background="@color/green"
+                app:layout_constraintTop_toBottomOf="@id/btn_automatic_cuaca" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_cuaca_pagi"
+                android:text="@string/cuaca_pagi"
+                app:layout_constraintTop_toBottomOf="@id/btn_automatic_cuaca"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cuaca_pagi"
+                android:hint="@string/pilih_cuaca_pagi"
+                app:layout_constraintTop_toBottomOf="@id/tv_cuaca_pagi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_cuaca_pagi"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_cuaca_siang"
+                android:text="@string/cuaca_siang"
+                app:layout_constraintTop_toBottomOf="@id/cuaca_pagi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cuaca_siang"
+                android:hint="@string/pilih_cuaca_siang"
+                app:layout_constraintTop_toBottomOf="@id/tv_cuaca_siang"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_cuaca_siang"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_cuaca_sore"
+                android:text="@string/cuaca_sore"
+                app:layout_constraintTop_toBottomOf="@id/cuaca_siang"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cuaca_sore"
+                android:hint="@string/pilih_cuaca_sore"
+                app:layout_constraintTop_toBottomOf="@id/tv_cuaca_sore"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_cuaca_sore"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_curah_hujan"
+                android:text="@string/curah_hujan_mm"
+                app:layout_constraintTop_toBottomOf="@id/cuaca_sore"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_curah_hujan"
+                android:hint="@string/contoh_curah_hujan"
+                app:layout_constraintTop_toBottomOf="@id/tv_curah_hujan"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_suhu"
+                android:text="@string/suhu"
+                app:layout_constraintTop_toBottomOf="@id/edt_curah_hujan"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_suhu"
+                android:hint="@string/contoh_suhu"
+                app:layout_constraintTop_toBottomOf="@id/tv_suhu"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_kelembaban"
+                android:text="@string/kelembaban"
+                app:layout_constraintTop_toBottomOf="@id/edt_suhu"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_kelembaban"
+                android:hint="@string/contoh_80"
+                app:layout_constraintTop_toBottomOf="@id/tv_kelembaban"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_kecepatan_angin"
+                android:text="@string/kecepatan_angin"
+                app:layout_constraintTop_toBottomOf="@id/edt_kelembaban"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_kecepatan_angin"
+                android:hint="@string/contoh_kecepatan_angin"
+                app:layout_constraintTop_toBottomOf="@id/tv_kecepatan_angin"
+                android:inputType="number" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/separator3"
+                android:background="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@id/edt_kecepatan_angin"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_data_patroli_lainnya"
+                android:text="@string/data_patroli_lainnya"
+                app:layout_constraintTop_toBottomOf="@id/separator3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_kondisi_lapangan"
+                android:text="@string/kondisi_lapangan"
+                app:layout_constraintTop_toBottomOf="@id/tv_data_patroli_lainnya"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kondisi_lapangan"
+                android:hint="@string/pilih_kondisi_lapangan"
+                app:layout_constraintTop_toBottomOf="@id/tv_kondisi_lapangan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_kondisi_lapangan"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_potensi_karhutla"
+                android:text="@string/potensi_karhutla"
+                app:layout_constraintTop_toBottomOf="@id/kondisi_lapangan"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/potensi_karhutla"
+                android:hint="@string/pilih_kondisi_lapangan"
+                app:layout_constraintTop_toBottomOf="@id/tv_potensi_karhutla"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_potensi_karhutla"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_ffmc_kkas"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_info"
+                app:layout_constraintTop_toTopOf="@id/tv_ffmc_kkas" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_ffmc_kkas"
+                android:text="@string/ffmc_kkas"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@id/potensi_karhutla"
+                app:layout_constraintStart_toEndOf="@id/btn_ffmc_kkas"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ffmc_kkas"
+                android:hint="@string/pilih_ffmc_kkas"
+                app:layout_constraintTop_toBottomOf="@id/tv_ffmc_kkas"
+                app:layout_constraintStart_toEndOf="@id/btn_ffmc_kkas"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_ffmc_kkas"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_fwi_ick"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_info"
+                app:layout_constraintTop_toTopOf="@id/tv_fwi_ick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_fwi_ick"
+                android:text="@string/fwi_ick"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@id/ffmc_kkas"
+                app:layout_constraintStart_toEndOf="@id/btn_fwi_ick"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fwi_ick"
+                android:hint="@string/pilih_fwi_ick"
+                app:layout_constraintTop_toBottomOf="@id/tv_fwi_ick"
+                app:layout_constraintStart_toEndOf="@id/btn_fwi_ick"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_fwi_ick"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_dc_kk"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_info"
+                app:layout_constraintTop_toTopOf="@id/tv_dc_kk" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_dc_kk"
+                android:text="@string/dc_kk"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@id/fwi_ick"
+                app:layout_constraintStart_toEndOf="@id/btn_dc_kk"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dc_kk"
+                android:hint="@string/pilih_dc_kk"
+                app:layout_constraintTop_toBottomOf="@id/tv_dc_kk"
+                app:layout_constraintStart_toEndOf="@id/btn_dc_kk"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_dc_kk"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_aktivitas_masyarakat"
+                android:text="@string/aktivitas_masyarakat"
+                app:layout_constraintTop_toBottomOf="@id/dc_kk"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aktivitas_masyarakat"
+                android:hint="@string/pilih_aktivitas_masyarakat"
+                app:layout_constraintTop_toBottomOf="@id/tv_aktivitas_masyarakat"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_aktivitas_masyarakat"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_aksesibilitas"
+                android:text="@string/aksesibilitas"
+                app:layout_constraintTop_toBottomOf="@id/aktivitas_masyarakat"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aksesibilitas"
+                android:hint="@string/pilih_aksesibilitas"
+                app:layout_constraintTop_toBottomOf="@id/tv_aksesibilitas"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="none">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_aksesibilitas"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

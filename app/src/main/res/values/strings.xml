@@ -137,4 +137,51 @@
     <string name="no_photo">Tidak Ada Foto</string>
     <string name="tambah_foto">Tambah Foto</string>
     <string name="pilih_satelit">Pilih Satelit</string>
+    <string name="simpan">Simpan</string>
+    <string name="data_laporan_patroli">Data Laporan Patroli</string>
+    <string name="tambah_data_patroli">Tambah Data Patroli +</string>
+    <string name="kondisi_umum_lokasi_patroli">Kondisi Umum Lokasi Patroli</string>
+    <string name="isi_otomatis_lokasi">Isi Otomatis Lokasi</string>
+    <string name="latitude_dalam_format_desimal">Latitude (dalam format desimal) <font fgcolor="#D6000B">*</font></string>
+    <string name="longitude_dalam_format_desimal">Longitude (dalam format desimal) <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_latitude">contoh : -2,313</string>
+    <string name="contoh_longitude">contoh : 102.9962</string>
+    <string name="desa_kelurahan">Desa/Kelurahan <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_desa">contoh : Ciangsana</string>
+    <string name="kecamatan">Kecamatan <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_dramaga">contoh : Dramaga</string>
+    <string name="kabupaten_kota">Kabupaten/Kota <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_kabupaten">contoh : Bogor</string>
+    <string name="provinsi">Provinsi <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_provinsi">contoh : Jawa Barat</string>
+    <string name="kondisi_cuaca">Kondisi Cuaca</string>
+    <string name="isi_otomatis_cuaca">Isi Otomatis Cuaca</string>
+    <string name="curah_hujan_mm">Curah Hujan (mm) <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_curah_hujan">contoh : 102</string>
+    <string name="suhu">Suhu (°C) <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_suhu">contoh : 24</string>
+    <string name="kelembaban">Kelembaban (0%-100% RH <font fgcolor="#D6000B">*</font></string>
+    <string name="contoh_80">contoh : 80</string>
+    <string name="kecepatan_angin">Kecepatan Angin (Km/jam) <font fgcolor="#D6000B">*</font></string>
+    <string name="cuaca_pagi">Cuaca Pagi</string>
+    <string name="cuaca_siang">Cuaca Siang</string>
+    <string name="pilih_cuaca_siang">Pilih Cuaca Siang</string>
+    <string name="cuaca_sore">Cuaca Sore</string>
+    <string name="pilih_cuaca_sore">Pilih Cuaca Sore</string>
+    <string name="contoh_kecepatan_angin">contoh : 15</string>
+    <string name="data_patroli_lainnya">Data Patroli Lainnya</string>
+    <string name="kondisi_lapangan">Kondisi Lapangan <font fgcolor="#D6000B">*</font></string>
+    <string name="pilih_kondisi_lapangan">Pilih Kondisi Lapangan</string>
+    <string name="potensi_karhutla">Potensi Karhutla <font fgcolor="#D6000B">*</font></string>
+    <string name="ffmc_kkas">FFMC KKAS <font fgcolor="#D6000B">*</font></string>
+    <string name="pilih_ffmc_kkas">Pilih FFMC KKAS</string>
+    <string name="fwi_ick">FWI ICK <font fgcolor="#D6000B">*</font></string>
+    <string name="pilih_fwi_ick">Pilih FWI ICK</string>
+    <string name="dc_kk">DC KK <font fgcolor="#D6000B">*</font></string>
+    <string name="pilih_dc_kk">Pilih DC KK</string>
+    <string name="aktivitas_masyarakat">Aktivitas Masyarakat <font fgcolor="#D6000B">*</font></string>
+    <string name="pilih_aktivitas_masyarakat">Pilih Aktivitas Masyarakat</string>
+    <string name="pilih_cuaca_pagi">Pilih Cuaca Pagi</string>
+    <string name="pilih_aksesibilitas">Pilih Aksesibilitas</string>
+    <string name="aksesibilitas">Aksesibilitas <font fgcolor="#D6000B">*</font></string>
 </resources>
